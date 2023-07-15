@@ -21,7 +21,7 @@ function Phrase(content) {
   this.content = content;
 
   this.processor = function(string) {
-    return string.toLowerCase();
+    return string.toLowerCase().replace(/\W/g, '');
   }
 
 this.processedContent = function processedContent() {
