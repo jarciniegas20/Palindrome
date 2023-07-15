@@ -1,6 +1,7 @@
 let assert = require("assert");
 let Phrase = require("../index.js"); // specifiying that the index.js file is one folder/path earlier
 
+
 describe("Phrase", function() { // Phrase is an object
   // Phrase#palindrome
   describe("#palindrome", function() { // palindrome is a method within an object (Phrase)
@@ -21,8 +22,15 @@ describe("Phrase", function() { // Phrase is an object
     });
 
     it("should return true for a palindrome with punctuation",function() {;
-    let punPalindrome= new Phrase("Race'car");
+    let punPalindrome= new Phrase("Madam, I’m Adam.");
     assert(punPalindrome.palindrome());
+    })
+
+    describe("#letters", function() {
+      it("should return only the letters", function() {
+        let punPalindrome = new Phrase("Madam, I’m Adam.")
+        assert.strictEqual(punPalindrome.letters(), "madamimadam")
+      })
     })
 
   });
