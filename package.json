@@ -1,0 +1,23 @@
+{
+  "name": "jarciniegas20-palindrome",
+  "version": "0.1.0",
+  "description": "Palindrome detector",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jarciniegas20/Palindrome.git"
+  },
+  "keywords": [
+    "palindrome",
+    "javascript"
+  ],
+  "author": "Jorge Arciniegas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jarciniegas20/Palindrome/issues"
+  },
+  "homepage": "https://github.com/jarciniegas20/Palindrome#readme"
+}
