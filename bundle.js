@@ -1,16 +1,28 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-let Phrase = require("jarciniegas20-palindrome");
+let Phrase = require("jarciniegas20-palindrome"); // reading index.js from the jarciniegas20-palindrome folder using the npm module
 
-let string = prompt("A palindrome is a word or phrase that is the same forwards and backwards. \
+function palindromeTester() {
+   
+    let string = prompt("A palindrome is a word or phrase that is the same forwards and backwards. \
 Please enter a string to test if it's a palindrome:");
-let phrase = new Phrase(string);
+    let phrase = new Phrase(string);
 
 if (phrase.palindrome()) { // if true
     alert(`"${phrase.content}" is a palindrome!`) 
  } else { 
         alert(`"${phrase.content}" is not a palindrome`)
  }
+}
 
+document.addEventListener("DOMContentLoaded", function() { // adding a second listener that listens to the event with the dom content loaded. 
+    // essentially, don't try to run this until the html page is loaded. 
+    // so the order is main.js right before this, then html page loaded, then this
+    
+    let form = document.querySelector("#palindromeTester"); // access the palindromeTester form id
+    form.addEventListener("submit", function() { // listen for when the button is pressed or "submitted"
+        palindromeTester(); // finally, once the button has been pressed, load the palindromeTester function
+    })
+});
 },{"jarciniegas20-palindrome":2}],2:[function(require,module,exports){
 module.exports = Phrase;
 
