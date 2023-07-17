@@ -37,7 +37,11 @@ this.letters = function letters() {
   
 //returns true for a palindrome, false otherwise
 this.palindrome = function palindrome() {
+  if (this.processedContent()) { // if there are any letters
   return this.processedContent() === reverse(this.processedContent());
+} else {
+  return false
+}
 }
 }
 

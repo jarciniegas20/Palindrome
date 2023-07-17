@@ -11,6 +11,11 @@ describe("Phrase", function() { // Phrase is an object
       assert(!nonPalindrome.palindrome()) // apple is a false palindrome, so to get "green" (true) we want opposite of false which is true 
     });
 
+    it("should return false for an empty string", function(){
+      let emptyPhrase = new Phrase("");
+      assert(!emptyPhrase.palindrome()) // apple is a false palindrome, so to get "green" (true) we want opposite of false which is true 
+    });
+
     it("should return true for a palindrome", function(){
       let plainPalindrome = new Phrase("racecar");
       assert(plainPalindrome.palindrome()) // apple is a false palindrome, so to get "green" (true) we want opposite of false which is true 
